@@ -1,0 +1,32 @@
+_metadata:
+  major_version: 1
+  minor_version: 1
+display_information:
+  name: Pinned Buttons
+  description: Pinned buttons
+  background_color: "#473e47"
+features:
+  bot_user:
+    display_name: Pinned Buttons
+    always_online: false
+  slash_commands:
+    - command: /pinned
+      description: Pinned buttons editor
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - chat:write
+      - commands
+      - groups:history
+settings:
+  event_subscriptions:
+    bot_events:
+      - message.channels
+      - message.groups
+  interactivity:
+    is_enabled: true
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
